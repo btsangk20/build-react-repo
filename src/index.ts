@@ -1,5 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
-import { calculator } from './helpers/calculator';
+
+import { MOCK_REC_WOOD_DECK, MOCK_L_WOOD_DECK } from './constants/index';
 
 type T3DOject = {
   title: string;
@@ -16,14 +17,9 @@ const RectWoodDeck: T3DOject = {
   title: 'RectWoodDeck',
   objectImage: '/images/2d_deck.png',
   onParameterChanged: (values: any) => {
-    const sum = calculator.sum(values.a, values.b);
-    const divide = calculator.divide(values.a, values.b);
-    const subtract = calculator.subtract(values.a, values.b);
-    const multiply = calculator.multiply(values.a, values.b);
+    console.log('onParameterChanged', values);
 
-    console.log(sum, divide, subtract, multiply);
-
-    return values;
+    return MOCK_REC_WOOD_DECK;
   },
 };
 
@@ -33,18 +29,16 @@ const LWoodDeck: T3DOject = {
   title: 'LWoodDeck',
   objectImage: '/images/l_2d_deck.png',
   onParameterChanged: (values: any) => {
-    const sum = calculator.sum(values.a, values.b);
-    const divide = calculator.divide(values.a, values.b);
-    const subtract = calculator.subtract(values.a, values.b);
-    const multiply = calculator.multiply(values.a, values.b);
+    console.log('onParameterChanged', values);
 
-    console.log(sum, divide, subtract, multiply);
-    return values;
+    return MOCK_L_WOOD_DECK;
   },
 };
 
 const showDialogParameter = (object3D: T3DOject) => {
-  return 'Return dialogParameters';
+  console.log('showDialogParameter', object3D);
+
+  return object3D;
 };
 
 const getListObject = () => {

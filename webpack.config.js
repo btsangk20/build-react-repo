@@ -4,7 +4,7 @@ module.exports = {
   mode: 'production',
   entry: './src/index.ts',
   output: {
-    filename: 'bundle.js',
+    filename: 'woodDeck3D.js',
     path: path.resolve(__dirname, 'dist'),
     library: 'WoodDeck3D',
     libraryTarget: 'umd',

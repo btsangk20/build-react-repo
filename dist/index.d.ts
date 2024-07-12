@@ -6,6 +6,6 @@ type T3DOject = {
     objectTypeId: string;
     onParameterChanged: (values: any) => any;
 };
-declare const showDialogParameter: (object3D: T3DOject) => string;
+declare const showDialogParameter: (object3D: T3DOject) => T3DOject;
 declare const getListObject: () => T3DOject[];
 export { getListObject, showDialogParameter };
