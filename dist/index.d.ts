@@ -8,4 +8,5 @@ type T3DOject = {
 };
 declare const showDialogParameter: (object3D: T3DOject) => T3DOject;
 declare const getListObject: () => T3DOject[];
-export { getListObject, showDialogParameter };
+declare const drawScene: () => void;
+export { getListObject, showDialogParameter, drawScene };
